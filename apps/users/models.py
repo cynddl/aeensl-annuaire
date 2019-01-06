@@ -337,11 +337,11 @@ class Membership(models.Model):
             return 0
 
         if active:
-            return 35 if self.in_couple else 45
+            return 37.5 if self.in_couple else 50
         if retired:
-            return 30 if self.in_couple else 40
+            return 33.5 if self.in_couple else 45
         if youth:
-            return 12.50 if self.in_couple else 20
+            return 17.5 if self.in_couple else 25
 
         raise ValueError(
             "Le type de cotisation {} n'est pas "
